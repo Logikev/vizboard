@@ -7,7 +7,7 @@
   "theme_color": "#111111",
   "icons": [
     {
-      "src": "vizboard/assets/appicon.png",
+      "src": "assets/icons/appicon.png",
       "sizes": "512x512",
       "type": "image/png"
     }
