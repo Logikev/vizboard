@@ -1,4 +1,5 @@
-const CACHE = "vision-board-v1";
+const CACHE = "vizboard-v2";
+
 
 self.addEventListener("install", e => {
   e.waitUntil(
@@ -6,7 +7,7 @@ self.addEventListener("install", e => {
       cache.addAll([
         "./",
         "./index.html",
-        "./styles/app.css",
+        "./styling/app.css",
         "./js/app.js"
       ])
     )

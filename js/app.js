@@ -15,6 +15,16 @@ const board = await service.load();
 renderBoard(board, boardEl);
 window.recordAudio = recordAudio; // expose for UI
 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./worker.js')
+    .then(reg => {
+      reg.onupdatefound = () => {
+        alert("A new version is available! Please close and reopen the app to update.");
+      };
+    });
+}
+
+
 document.getElementById("imageInput").onchange = async e => {
   const file = e.target.files[0];
   await service.addCard({
