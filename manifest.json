@@ -7,7 +7,7 @@
   "theme_color": "#111111",
   "icons": [
     {
-      "src": "https://cdn-icons-png.flaticon.com/512/833/833472.png",
+      "src": "vizboard/assets/appicon.png",
       "sizes": "512x512",
       "type": "image/png"
     }

@@ -27,6 +27,7 @@ header {
 
 .board {
   display: flex;
+  flex-direction: column-reverse;       /* horizontal scrolling of cards */
   gap: 1rem;
   padding: 1rem;
   overflow-x: auto;
@@ -34,6 +35,9 @@ header {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;    /* vertical stacking inside the card */
+  align-items: center;
   min-width: 250px;
   background: #1a1a1a;
   padding: 1rem;
@@ -41,7 +45,51 @@ header {
   scroll-snap-align: center;
 }
 
+.card audio {
+  margin-bottom: 0.5rem;
+}
+.card p {
+  margin: 0.5rem 0;
+}
 .card img {
   width: 100%;
   border-radius: 8px;
+  margin-top: 0.5rem;
+}
+.card button {
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.menu-content {
+  display: none;
+  position: absolute;
+  background: #1a1a1a;
+  padding: 0.5rem;
+  border-radius: 8px;
+  color: #fff;
+  width: 200px;
+  text-align: left;
+}
+
+.menu-content p {
+  margin: 0.25rem 0;
+}
+
+.menu-content ol {
+  padding-left: 1.2rem;
+  margin: 0.25rem 0;
+}
+
+.menu-content li {
+  margin-bottom: 0.25rem;
 }
