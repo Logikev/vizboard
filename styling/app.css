@@ -64,25 +64,42 @@ header {
   cursor: pointer;
 }
 
+/* Hamburger container */
 .menu {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
+  position: fixed;       /* fixed to screen, not relative to page content */
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;         /* always on top */
 }
 
+/* Hidden content by default */
 .menu-content {
   display: none;
-  position: absolute;
+  position: fixed;       /* fixed so it stays at right */
+  top: 3rem;             /* below the button */
+  right: 0.5rem;         /* align right edge */
   background: #1a1a1a;
-  padding: 0.5rem;
+  padding: 0.75rem 1rem;
   border-radius: 8px;
   color: #fff;
-  width: 200px;
-  text-align: left;
+  width: 220px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Optional arrow pointing to button */
+.menu-content::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: 12px;
+  border-width: 0 8px 8px 8px;
+  border-style: solid;
+  border-color: transparent transparent #1a1a1a transparent;
 }
 
 .menu-content p {
   margin: 0.25rem 0;
+  font-size: 0.9rem;
 }
 
 .menu-content ol {

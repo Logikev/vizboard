@@ -56,3 +56,8 @@ document.getElementById("addTextBtn").onclick = async () => {
 menuBtn.onclick = () => {
   menuContent.style.display = menuContent.style.display === "block" ? "none" : "block";
 };
+document.addEventListener("click", (e) => {
+  if (!menuContent.contains(e.target) && e.target !== menuBtn) {
+    menuContent.style.display = "none";
+  }
+});
